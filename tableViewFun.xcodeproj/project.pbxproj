@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		36A17ACF2540B3BF00524E0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A17ACE2540B3BF00524E0B /* AppDelegate.swift */; };
 		36A17AD12540B3BF00524E0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A17AD02540B3BF00524E0B /* SceneDelegate.swift */; };
-		36A17AD32540B3BF00524E0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A17AD22540B3BF00524E0B /* ViewController.swift */; };
+		36A17AD32540B3BF00524E0B /* DogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A17AD22540B3BF00524E0B /* DogTableViewController.swift */; };
 		36A17AD62540B3BF00524E0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A17AD42540B3BF00524E0B /* Main.storyboard */; };
 		36A17AD82540B3C100524E0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A17AD72540B3C100524E0B /* Assets.xcassets */; };
 		36A17ADB2540B3C100524E0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A17AD92540B3C100524E0B /* LaunchScreen.storyboard */; };
+		36A17AE32540B40300524E0B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 36A17AE22540B40300524E0B /* .gitignore */; };
+		36A17AE52540B69600524E0B /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A17AE42540B69600524E0B /* Dog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		36A17ACB2540B3BF00524E0B /* tableViewFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableViewFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A17ACE2540B3BF00524E0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A17AD02540B3BF00524E0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		36A17AD22540B3BF00524E0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		36A17AD22540B3BF00524E0B /* DogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTableViewController.swift; sourceTree = "<group>"; };
 		36A17AD52540B3BF00524E0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36A17AD72540B3C100524E0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36A17ADA2540B3C100524E0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36A17ADC2540B3C100524E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36A17AE22540B40300524E0B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		36A17AE42540B69600524E0B /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		36A17AC22540B3BF00524E0B = {
 			isa = PBXGroup;
 			children = (
+				36A17AE22540B40300524E0B /* .gitignore */,
 				36A17ACD2540B3BF00524E0B /* tableViewFun */,
 				36A17ACC2540B3BF00524E0B /* Products */,
 			);
@@ -58,11 +63,12 @@
 			children = (
 				36A17ACE2540B3BF00524E0B /* AppDelegate.swift */,
 				36A17AD02540B3BF00524E0B /* SceneDelegate.swift */,
-				36A17AD22540B3BF00524E0B /* ViewController.swift */,
+				36A17AD22540B3BF00524E0B /* DogTableViewController.swift */,
 				36A17AD42540B3BF00524E0B /* Main.storyboard */,
 				36A17AD72540B3C100524E0B /* Assets.xcassets */,
 				36A17AD92540B3C100524E0B /* LaunchScreen.storyboard */,
 				36A17ADC2540B3C100524E0B /* Info.plist */,
+				36A17AE42540B69600524E0B /* Dog.swift */,
 			);
 			path = tableViewFun;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A17AE32540B40300524E0B /* .gitignore in Resources */,
 				36A17ADB2540B3C100524E0B /* LaunchScreen.storyboard in Resources */,
 				36A17AD82540B3C100524E0B /* Assets.xcassets in Resources */,
 				36A17AD62540B3BF00524E0B /* Main.storyboard in Resources */,
@@ -138,8 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36A17AD32540B3BF00524E0B /* ViewController.swift in Sources */,
+				36A17AD32540B3BF00524E0B /* DogTableViewController.swift in Sources */,
 				36A17ACF2540B3BF00524E0B /* AppDelegate.swift in Sources */,
+				36A17AE52540B69600524E0B /* Dog.swift in Sources */,
 				36A17AD12540B3BF00524E0B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
