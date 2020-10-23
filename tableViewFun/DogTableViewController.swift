@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DogTableViewController: UIViewController 
+class DogTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate 
 {
 	
 	var dogs: [Dog] = []
@@ -23,6 +23,22 @@ class DogTableViewController: UIViewController
 		dogs.append(Dog(name: "Spike", breed: "Bulldog"))
 	}
 
-
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int 
+	{
+		// "how many rows should i put in this section"
+		// we will only have 1 section
+		return section == 0 ? dogs.count : 0
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell 
+	{
+		// "what cell should i put at this indexPath"
+		let row = indexPath.row
+		let dog = dogs[row]
+		
+		let cell = tableView.dequeueReusableCell(withIdentifier: "DogCell", for: indexPath) as! DogTableViewCell
+		cell.update(with: dog)
+		return cell
+	}
 }
 
