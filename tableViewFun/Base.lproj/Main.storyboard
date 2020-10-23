@@ -18,6 +18,45 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Adr-Ft-Gar">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DogCell" id="JbL-Ne-eyy" customClass="DogTableViewCell" customModule="tableViewFun" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="29"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JbL-Ne-eyy" id="9u7-Ly-P1o">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="29"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JvV-1o-2GX">
+                                                    <rect key="frame" x="4" y="4" width="406" height="21"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cF6-uY-hwt">
+                                                            <rect key="frame" x="0.0" y="0.0" width="203" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Breed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcf-8M-aQy">
+                                                            <rect key="frame" x="203" y="0.0" width="203" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="JvV-1o-2GX" secondAttribute="trailing" constant="4" id="2OS-mF-x2V"/>
+                                                <constraint firstAttribute="bottom" secondItem="JvV-1o-2GX" secondAttribute="bottom" constant="4" id="84j-OM-QGz"/>
+                                                <constraint firstItem="JvV-1o-2GX" firstAttribute="top" secondItem="9u7-Ly-P1o" secondAttribute="top" constant="4" id="Psr-sq-AG5"/>
+                                                <constraint firstItem="JvV-1o-2GX" firstAttribute="leading" secondItem="9u7-Ly-P1o" secondAttribute="leading" constant="4" id="xVJ-QD-sxu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="breedLabel" destination="Fcf-8M-aQy" id="tQs-sW-Yc6"/>
+                                            <outlet property="nameLabel" destination="cF6-uY-hwt" id="0ij-5h-gUp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

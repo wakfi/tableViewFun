@@ -15,6 +15,7 @@
 		36A17ADB2540B3C100524E0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A17AD92540B3C100524E0B /* LaunchScreen.storyboard */; };
 		36A17AE32540B40300524E0B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 36A17AE22540B40300524E0B /* .gitignore */; };
 		36A17AE52540B69600524E0B /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A17AE42540B69600524E0B /* Dog.swift */; };
+		36FFA3D4254353DA0067FFB2 /* DogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FFA3D3254353DA0067FFB2 /* DogTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		36A17ADC2540B3C100524E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36A17AE22540B40300524E0B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		36A17AE42540B69600524E0B /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		36FFA3D3254353DA0067FFB2 /* DogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				36A17AD92540B3C100524E0B /* LaunchScreen.storyboard */,
 				36A17ADC2540B3C100524E0B /* Info.plist */,
 				36A17AE42540B69600524E0B /* Dog.swift */,
+				36FFA3D3254353DA0067FFB2 /* DogTableViewCell.swift */,
 			);
 			path = tableViewFun;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			files = (
 				36A17AD32540B3BF00524E0B /* DogTableViewController.swift in Sources */,
 				36A17ACF2540B3BF00524E0B /* AppDelegate.swift in Sources */,
+				36FFA3D4254353DA0067FFB2 /* DogTableViewCell.swift in Sources */,
 				36A17AE52540B69600524E0B /* Dog.swift in Sources */,
 				36A17AD12540B3BF00524E0B /* SceneDelegate.swift in Sources */,
 			);
