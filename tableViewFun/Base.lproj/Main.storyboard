@@ -73,7 +73,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tLx-8q-ZTe"/>
+                    <navigationItem key="navigationItem" id="tLx-8q-ZTe">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="dAH-D0-L4Z">
+                            <connections>
+                                <segue destination="3Hd-tU-bTE" kind="show" identifier="addDetailSegue" id="UBk-Su-K0p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Adr-Ft-Gar" id="qRE-xK-uEz"/>
                     </connections>
@@ -151,6 +157,75 @@
             </objects>
             <point key="canvasLocation" x="1955.072463768116" y="133.92857142857142"/>
         </scene>
+        <!--Add New Dog-->
+        <scene sceneID="5n2-kK-pqV">
+            <objects>
+                <viewController id="3Hd-tU-bTE" customClass="DogDetailViewController" customModule="tableViewFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eZ5-8H-VQm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4By-Kf-FMb">
+                                <rect key="frame" x="16" y="154" width="382" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DH-1o-9Qi">
+                                        <rect key="frame" x="0.0" y="0.0" width="45.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Km8-qK-DnS">
+                                        <rect key="frame" x="55.5" y="0.0" width="326.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QCV-4I-Cv4">
+                                <rect key="frame" x="16" y="104" width="382" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56U-nO-82U">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cl3-Bb-tcK">
+                                        <rect key="frame" x="55" y="0.0" width="327" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QCV-4I-Cv4" firstAttribute="leading" secondItem="2KR-L7-o7X" secondAttribute="leading" constant="16" id="TSD-Xg-s6d"/>
+                            <constraint firstItem="QCV-4I-Cv4" firstAttribute="top" secondItem="2KR-L7-o7X" secondAttribute="top" constant="16" id="bZm-Ko-gCe"/>
+                            <constraint firstItem="2KR-L7-o7X" firstAttribute="trailing" secondItem="4By-Kf-FMb" secondAttribute="trailing" constant="16" id="qfb-D3-o15"/>
+                            <constraint firstItem="4By-Kf-FMb" firstAttribute="leading" secondItem="2KR-L7-o7X" secondAttribute="leading" constant="16" id="tZn-Qu-71a"/>
+                            <constraint firstItem="2KR-L7-o7X" firstAttribute="trailing" secondItem="QCV-4I-Cv4" secondAttribute="trailing" constant="16" id="xik-IZ-Okn"/>
+                            <constraint firstItem="4By-Kf-FMb" firstAttribute="top" secondItem="QCV-4I-Cv4" secondAttribute="bottom" constant="16" id="zO1-NL-QU0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2KR-L7-o7X"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Dog" id="QMf-ZZ-jPe">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="u09-a1-Nf0">
+                            <connections>
+                                <segue destination="1NP-qE-n25" kind="unwind" identifier="newSaveUnwindSegue" unwindAction="unwindToDogTableViewControllerWithSegue:" id="jox-Xq-6w7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="breedTextField" destination="Km8-qK-DnS" id="uoG-Gv-0ry"/>
+                        <outlet property="nameTextField" destination="Cl3-Bb-tcK" id="v9s-2U-v0t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dux-Pm-pOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1NP-qE-n25" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1955" y="-546"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="A95-a6-tMb">
             <objects>
@@ -170,4 +245,7 @@
             <point key="canvasLocation" x="128.98550724637681" y="132.58928571428572"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

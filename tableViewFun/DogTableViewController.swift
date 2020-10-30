@@ -76,6 +76,15 @@ class DogTableViewController: UIViewController, UITableViewDataSource, UITableVi
 						}
 					}
 				}
+			} else if identifier == "newSaveUnwindSegue" {
+				if let dogDetailVC = segue.source as? DogDetailViewController
+				{
+					if let dog = dogDetailVC.dogOptional
+					{
+						dogs.append(dog)
+						tableView.reloadData()
+					}
+				}
 			}
 		}
 	}
