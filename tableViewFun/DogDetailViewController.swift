@@ -14,6 +14,7 @@ class DogDetailViewController: UIViewController {
 
 	@IBOutlet var nameTextField: UITextField!
 	@IBOutlet var breedTextField: UITextField!
+	@IBOutlet var dogImageView: UIImageView!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class DogDetailViewController: UIViewController {
 		{
 			nameTextField.text = dog.name
 			breedTextField.text = dog.breed
+			dogImageView.image = UIImage(named: dog.imageName)
 		}
         // Do any additional setup after loading the view.
     }

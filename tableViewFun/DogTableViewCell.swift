@@ -13,6 +13,7 @@ class DogTableViewCell: UITableViewCell
 
 	@IBOutlet var nameLabel: UILabel!
 	@IBOutlet var breedLabel: UILabel!
+	@IBOutlet var dogImageView: UIImageView!
 	
 	override func awakeFromNib() 
 	{
@@ -31,6 +32,7 @@ class DogTableViewCell: UITableViewCell
 	{
 		nameLabel.text = dog.name
 		breedLabel.text = dog.breed
+		dogImageView.image = UIImage(named: dog.imageName)
 	}
 	
 	

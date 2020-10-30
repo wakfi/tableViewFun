@@ -41,6 +41,25 @@ class DogTableViewController: UIViewController, UITableViewDataSource, UITableVi
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) 
+	{
+		let dog = dogs.remove(at: sourceIndexPath.row)
+		dogs.insert(dog, at: destinationIndexPath.row)
+	}
+	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) 
+	{
+		dogs.remove(at: indexPath.row)
+		tableView.deleteRows(at: [indexPath], with: .fade)
+	}
+	
+	@IBAction func editButtonPressed(_ sender: UIBarButtonItem) 
+	{
+		let newEditingMode = !tableView.isEditing
+		tableView.setEditing(newEditingMode, animated: true)
+		tableView.reloadData()
+	}
+	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) 
 	{
 		if let identifier = segue.identifier
