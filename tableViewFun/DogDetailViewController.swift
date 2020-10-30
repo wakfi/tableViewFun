@@ -35,7 +35,7 @@ class DogDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
 		if let identifier = segue.identifier
 		{
-			if identifier == "saveUnwindSegue" || identifier == "newSaveUnwindSegue"
+			if identifier == "saveUnwindSegue"
 			{
 				if let name = nameTextField.text, let breed = breedTextField.text
 				{
